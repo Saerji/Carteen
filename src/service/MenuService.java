@@ -7,15 +7,31 @@ import model.Shop;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MenuService {
-    private final ArrayList<Product> menu = new ArrayList<>();
-    
+    private final ArrayList<Product> products = new ArrayList<>();
+
     public MenuService() {
-        
+        initializeProducts();
     }
 
-    public List<Product> getMenu() {
-        return List.copyOf(menu);
+    public void initializeProducts (){
+        products.add(new Product("Jumbo", 25, FoodCategory. MEAL, Shop.TENDER_JUICY));
+    }
+
+    public List<Product> getAllProduct(){
+        return new ArrayList<Product>(products);
+    }
+
+    public List<Product> getProductsByShop(Shop shop) {
+
+        ArrayList<Product> result = new ArrayList<>();
+
+        for (Product product : products) {
+            if (product.getShop() == shop) {
+                result.add(product);
+            }
+        }
+
+        return result;
     }
 }
