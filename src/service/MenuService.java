@@ -19,19 +19,16 @@ public class MenuService {
     }
 
     public List<Product> getAllProduct(){
-        return new ArrayList<Product>(products);
+        return new ArrayList<Product>(products);  
     }
 
     public List<Product> getProductsByShop(Shop shop) {
-
-        ArrayList<Product> result = new ArrayList<>();
-
-        for (Product product : products) {
-            if (product.getShop() == shop) {
-                result.add(product);
+        List<Product> shopResult = new ArrayList<>();
+        for(Product product : products) {
+            if(product.getShop() == shop) {
+                shopResult.add(product);
             }
         }
-
-        return result;
+        return shopResult;
     }
 }

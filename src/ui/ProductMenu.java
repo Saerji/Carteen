@@ -1,29 +1,23 @@
 package ui;
 
-import java.util.List;
-
+import service.MenuService;
 import model.Product;
 import model.Shop;
-import service.MenuService;
 
-public class ProductMenu {
+import java.util.ArrayList;
+import java.util.List;
 
-    private MenuService menuService;
-
+class ProductMenu {
+    private final MenuService menuService;
     public ProductMenu(MenuService menuService) {
         this.menuService = menuService;
     }
 
-    public void displayProducts(Shop shop) {
-
-        List<Product> products = menuService.getProductsByShop(shop);
-
-        System.out.println("\n===== " + shop.name() + " MENU =====");
-
-        for (Product product : products) {
-            System.out.println(
-                product.getName() + " - PHP " + product.getPrice()
-            );
+    public void displayProducts(int choice) {
+        Shop selectedShop = Shop.values()[choice - 1];
+        List<Product> productList = menuService.getProductsByShop(selectedShop);
+        for(Product product : productList) {
+            System.out.println(product.getName() + " - " + product.getPrice());
         }
     }
 }
