@@ -6,9 +6,10 @@ Carteen is a Java-based canteen cart and order history system with a graphical u
 
 | | |
 |---|---|
-| *Course* | OOP101, Object-Oriented Programming |
+| *Course & Section* | Object-Oriented Programming, BSIT-2113 |
 | *Semester* | First Semester, AY 2026-2027 |
-| *School* | Batangas State University, College of Informatics and Computing Sciences |
+| *School* | Batangas State University - The National Engineering University |
+| *Department* | College of Informatics and Computing Sciences |
 | *Instructor* | Mr. Juriel U. Comia |
 
 ## Group Members
