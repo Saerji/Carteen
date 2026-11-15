@@ -14,6 +14,7 @@ public class CartMenu {
 
     public void displayCart(){
         List<CartItem> items = cartService.getCartItems();
+        int number = 1;
         System.out.println("- - - Cart - - -");
 
         if(items.isEmpty()){
@@ -22,10 +23,21 @@ public class CartMenu {
         }
 
         for (CartItem item : items) {
-            System.out.println("[1] " + item.getProduct() + " x "
+            System.out.println("[" + number + "]: " + item.getProduct().getName() + " x "
             + item.getQuantity() + " = ₱" + item.getSubtotal());
+            number++;
         }
         System.out.println("- - - - -");
         System.out.println("Total: " + cartService.getTotalPrice());
+    }
+
+    public void removeProduct(int choice){
+        List<CartItem> items = cartService.getCartItems();
+
+        if(choice < 1 || choice > items.size()) {
+            System.out.println("Invalid product selection.");
+            return;
+        }
+        cartService.removeProduct(items.get(choice - 1).getProduct());
     }
 }
