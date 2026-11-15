@@ -15,7 +15,7 @@ Carteen is a Java-based canteen cart and order history system with a graphical u
 
 | Name | GitHub |
 |---|---|
-| Ivy (add your full name) | (add your username) |
+| Abarico, Ivy Keith R. | ivybrofen100mg |
 | Labog, Rodward Lucio F. | IamRodward |
 | Maldonado, Sergie Alexis S. | Saerji |
 
@@ -42,4 +42,4 @@ Waiting in line at the canteen takes up break time, and students often do not kn
 
 ## Acknowledgment
 
-We thank Mr. Juriel U. Comia for his guidance throughout OOP101.
+We thank Mr. Juriel U. Comia for his guidance throughout OOP 101.
