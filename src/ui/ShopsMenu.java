@@ -2,22 +2,25 @@
 package ui;
 
 import model.Shop;
+import service.CartService;
 import service.MenuService;
+
 
 import java.util.Scanner;
 
 public class ShopsMenu {
-    Scanner sc = new Scanner(System.in);
-
+    private final Scanner sc;
     private final MenuService menuService;
+    private final CartService cartService;
 
     // Center alignment
     private static final int WIDTH = 100;
 
-    public ShopsMenu(MenuService menuService) {
+    public ShopsMenu(MenuService menuService, CartService cartService, Scanner sc) {
+        this.sc = sc;
         this.menuService = menuService;
+        this.cartService = cartService;
     }
-
     private String center(String text) {
         int padding = (WIDTH - text.length()) / 2;
         return " ".repeat(Math.max(0, padding)) + text;
@@ -77,7 +80,12 @@ public class ShopsMenu {
             return;
         }
 
-        ProductMenu productMenu = new ProductMenu(menuService);
+        ProductMenu productMenu = new ProductMenu(
+            this.menuService,
+            this.cartService,
+            this.sc
+        );
+
         productMenu.displayProducts(shopChoice);
     }
 }
