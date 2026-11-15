@@ -15,7 +15,7 @@ Carteen is a Java-based canteen cart and order history system with a graphical u
 
 | Name | GitHub |
 |---|---|
-| Abarico, Ivy Keith R. | ivybrofen100mg |
+| Abarico, Ivy Keith R. | ivyprofen100mg |
 | Labog, Rodward Lucio F. | IamRodward |
 | Maldonado, Sergie Alexis S. | Saerji |
 
