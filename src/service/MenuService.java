@@ -15,7 +15,17 @@ public class MenuService {
     }
 
     public void initializeProducts (){
+        // Tender Juicy Stall
         products.add(new Product("Jumbo", 25, FoodCategory. MEAL, Shop.TENDER_JUICY));
+        // Spot G
+
+        // Chowking
+
+        //Fruit Juice
+
+        // Potato Corner
+
+        //Waffle Time
     }
 
     public List<Product> getAllProduct(){
