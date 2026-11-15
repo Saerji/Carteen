@@ -4,7 +4,6 @@ import service.MenuService;
 import model.Product;
 import model.Shop;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class ProductMenu {
