@@ -146,6 +146,113 @@ public class MenuService {
         products.add(new Product("Jumbo Pork Asado", 40, FoodCategory.SNACK, Shop.FRIED_NOODLES_HAUS));
         products.add(new Product("Gulaman", 15, FoodCategory.DRINK, Shop.FRIED_NOODLES_HAUS));
         
+        // Cafe Aromatiko
+        products.add(new Product("Frappe Java Chips 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Java Chips 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe White Mocha 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe White Mocha 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Mocha 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Mocha 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Cookies & Cream 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Cookies & Cream 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Dark Chocolate 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Dark Chocolate 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Matcha 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Matcha 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Strawberry 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Strawberry 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Red Velvet 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Red Velvet 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Oreo Cheesecake 16oz", 69, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Frappe Oreo Cheesecake 22oz", 79, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Milktea Taro 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Taro 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Okinawa 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Okinawa 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Hokkaido 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Hokkaido 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Dark Chocolate 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Dark Chocolate 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Salted Caramel 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Salted Caramel 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Cookies and Cream 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Cookies and Cream 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Winter Melon 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Winter Melon 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Matcha 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Milktea Matcha 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Hot Americano 8oz", 39, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Americano 12oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Vanilla Cafe Latte 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Vanilla Cafe Latte 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Cappuccino 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Cappuccino 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Caramel Latte 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Caramel Latte 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Caramel Macchiato 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Caramel Macchiato 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Spanish Latte 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Spanish Latte 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Hazelnut Latte 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Hazelnut Latte 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot White Mocha 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot White Mocha 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Mocha 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Mocha 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Iced Americano 16oz", 49, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Americano 22oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Vanilla Latte 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Vanilla Latte 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Caramel Macchiato 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Caramel Macchiato 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Spanish Latte 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Spanish Latte 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Matcha Espresso 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Matcha Espresso 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced White Mocha 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced White Mocha 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Hazelnut Latte 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Hazelnut Latte 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Hazelnut Latte 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Hazelnut Latte 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Dark Mocha 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Dark Mocha 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Hot Choco Milky Chocolate 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Milky Chocolate 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Nutty Chocolate 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Nutty Chocolate 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Chocolate Vanilla 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Chocolate Vanilla 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Chocolate Caramel 8oz", 45, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Hot Choco Chocolate Caramel 12oz", 59, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Iced Choco Milky Chocolate 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Milky Chocolate 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Nutty Chocolate 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Nutty Chocolate 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Chocolate Vanilla 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Chocolate Vanilla 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Chocolate Caramel 16oz", 55, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Iced Choco Chocolate Caramel 22oz", 65, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Ice Cream Cone Vanilla", 25, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Ice Cream Cone Chocolate", 25, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Ice Cream Sundae Oreo", 35, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Ice Cream Sundae Strawberry", 35, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Ice Cream Sundae Chocolate", 35, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Ice Cream Sundae Caramel", 35, FoodCategory.DESSERT, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Coke Float", 40, FoodCategory.DRINK, Shop.CAFE_AROMATIKO));
+
+        products.add(new Product("Add-on Cashews", 7, FoodCategory.SNACK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Add-on Peanuts", 7, FoodCategory.SNACK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Add-on Java Chips", 7, FoodCategory.SNACK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Add-on Oreo", 7, FoodCategory.SNACK, Shop.CAFE_AROMATIKO));
+        products.add(new Product("Add-on Marshmallow", 7, FoodCategory.SNACK, Shop.CAFE_AROMATIKO));
+        
     }
 
     public List<Product> getAllProduct() {
