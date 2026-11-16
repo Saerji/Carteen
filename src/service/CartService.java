@@ -55,7 +55,7 @@ public class CartService {
     private final List<String> addHistory = new ArrayList<>();
 
     public void logAdd(Product product) {
-        this.addHistory.add(product.getName() + " - PHP " + product.getPrice());
+        this.addHistory.add(product.getName() + " - ₱" + product.getPrice());
     }
 
     public List<String> getAddHistory() {
