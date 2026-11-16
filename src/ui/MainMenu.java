@@ -18,19 +18,19 @@ public class MainMenu {
     }
 
     public int displayMenu() {
-        System.out.println("===== Carteen =====");
-        System.out.println("Welcome User!");
-        System.out.println();
-        System.out.println("[1] Add Foods to Cart");
-        System.out.println("[2] View / Edit Cart");
-        System.out.println("[3] View Cart Adding History");
-        System.out.println("[4] Exit");
-
-        System.out.println();
-
+        System.out.println("╔══════════════════════════════════╗");
+        System.out.println("║           CANTEEN MENU           ║");
+        System.out.println("╠══════════════════════════════════╣");
+        System.out.println("║  Welcome User!                   ║");
+        System.out.println("║                                  ║");
+        System.out.println("║  [1] Add Foods to Cart           ║");
+        System.out.println("║  [2] View / Edit Cart            ║");
+        System.out.println("║  [3] View Cart Adding History    ║");
+        System.out.println("║  [4] Exit                        ║");
+        System.out.println("╚══════════════════════════════════╝");
         System.out.print("Enter your choice: ");
+        
         int choice = sc.nextInt();
-
         return choice;
     }
 
