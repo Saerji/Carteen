@@ -14,5 +14,6 @@ public class Main {
         MainMenu mainMenu = new MainMenu(sc, menuService, cartService);
 
         mainMenu.runMenu();
+        sc.close();
     }
 }
