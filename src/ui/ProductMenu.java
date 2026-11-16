@@ -54,6 +54,7 @@ class ProductMenu {
         Product selectedProduct = productList.get(productChoice - 1);
 
         cartService.addProduct(selectedProduct);
+        cartService.logAdd(selectedProduct);
 
         System.out.println(
             selectedProduct.getName() + " added to cart!"

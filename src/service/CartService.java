@@ -31,7 +31,7 @@ public class CartService {
 
     public double getTotalPrice() {
         double total = 0;
-        
+
         for(CartItem item : cartItems) {
             total += item.getSubtotal();
         }
@@ -52,7 +52,13 @@ public class CartService {
         }
     }
 
-    public void clearCart(){
-        cartItems.clear();
+    private final List<String> addHistory = new ArrayList<>();
+
+    public void logAdd(Product product) {
+        this.addHistory.add(product.getName() + " - PHP " + product.getPrice());
+    }
+
+    public List<String> getAddHistory() {
+        return new ArrayList<>(this.addHistory);
     }
 }

@@ -1,6 +1,7 @@
 package ui;
 
 import java.util.Scanner;
+import java.util.List;
 
 import service.CartService;
 import service.MenuService;
@@ -70,7 +71,19 @@ public class MainMenu {
     }
 
     public void viewHistory(){
-        System.out.println("Soon!");
+        System.out.println("\n===== CART ADDING HISTORY =====");
+        List<String> history = cartService.getAddHistory();
+
+        if (history.isEmpty()) {
+            System.out.println("No items added yet.");
+        } else {
+            int number = 1;
+            for (String entry : history) {
+                System.out.println("[" + number + "] " + entry);
+                number++;
+            }
+        }
+        System.out.println();
     }
 
     public void exitProgram(){
