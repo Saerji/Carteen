@@ -19,7 +19,7 @@ public class MainMenu {
 
     public int displayMenu() {
         System.out.println("╔══════════════════════════════════╗");
-        System.out.println("║           CANTEEN MENU           ║");
+        System.out.println("║           CARTEEN MENU           ║");
         System.out.println("╠══════════════════════════════════╣");
         System.out.println("║  Welcome User!                   ║");
         System.out.println("║                                  ║");
