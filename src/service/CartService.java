@@ -52,6 +52,10 @@ public class CartService {
         }
     }
 
+    public void clearCart() {
+        cartItems.clear();
+    }
+
     private final List<String> addHistory = new ArrayList<>();
 
     public void logAdd(Product product) {
