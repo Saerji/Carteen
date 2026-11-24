@@ -7,7 +7,7 @@ import java.util.List;
 public class Order {
     private final int orderNumber;
     private final List<OrderItem> items;
-    private LocalDateTime orderTime;
+    private final LocalDateTime orderTime;
     private final double total;
     
     public Order(int orderNumber, List<OrderItem> items) {
@@ -33,7 +33,7 @@ public class Order {
         return orderNumber;
     }
     public List<OrderItem> getItems(){
-        return items;
+        return new ArrayList<>(items);
     }
     public LocalDateTime getOrderTime(){
         return orderTime;
