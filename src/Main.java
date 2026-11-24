@@ -3,6 +3,8 @@ import ui.*;
 import java.util.Scanner;
 
 import service.CartService;
+import service.CheckoutService;
+import service.HistoryService;
 import service.MenuService;
 
 public class Main {
@@ -10,8 +12,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         MenuService menuService = new MenuService();
         CartService cartService = new CartService();
+        CheckoutService checkoutService = new CheckoutService(cartService);
+        HistoryService historyService = new HistoryService();
 
-        MainMenu mainMenu = new MainMenu(sc, menuService, cartService);
+        MainMenu mainMenu = new MainMenu(sc, menuService, cartService, checkoutService, historyService);
 
         mainMenu.runMenu();
         sc.close();
