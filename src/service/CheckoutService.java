@@ -8,14 +8,13 @@ import java.util.List;
 
 public class CheckoutService {
     private final CartService cartService;
-    private int nextOrderNumber;
+    private int nextOrderNumber = 1;
 
     public CheckoutService (CartService cartService) {
         if (cartService == null) {
             throw new IllegalArgumentException("Cart can't be empty.");
         }
         this.cartService = cartService;
-        this.nextOrderNumber = nextOrderNumber;
     }
 
     public Order checkout() {
