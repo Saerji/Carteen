@@ -17,7 +17,7 @@ public class CheckoutService {
         this.cartService = cartService;
     }
 
-    public Order checkout() {
+    public Order createOrder() {
         List<CartItem> cartItems = cartService.getCartItems();
         List<OrderItem> orderItems = new ArrayList<>();
 
@@ -32,9 +32,12 @@ public class CheckoutService {
         }
 
         Order order = new Order(nextOrderNumber, orderItems);
-        nextOrderNumber++;
-        cartService.clearCart();
         
         return order;
+    }
+
+    public void completeCheckout() {
+        nextOrderNumber++;
+        cartService.clearCart();
     }
 }
