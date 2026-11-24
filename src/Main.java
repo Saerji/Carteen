@@ -1,4 +1,3 @@
-import ui.*;
 import ui.console.MainMenu;
 
 import java.util.Scanner;
