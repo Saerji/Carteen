@@ -1,4 +1,4 @@
-package ui;
+package ui.console;
 
 import service.MenuService;
 import model.Product;

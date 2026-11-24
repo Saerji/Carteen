@@ -1,10 +1,9 @@
 
-package ui;
+package ui.console;
 
 import model.Shop;
 import service.CartService;
 import service.MenuService;
-
 
 import java.util.Scanner;
 

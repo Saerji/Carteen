@@ -1,4 +1,4 @@
-package ui;
+package ui.console;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -7,7 +7,6 @@ import service.CartService;
 import service.HistoryService;
 import service.CheckoutService;
 import service.MenuService;
-
 import model.Order;
 import model.OrderItem;
 
