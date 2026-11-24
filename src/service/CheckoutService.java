@@ -12,7 +12,7 @@ public class CheckoutService {
 
     public CheckoutService (CartService cartService) {
         if (cartService == null) {
-            throw new IllegalArgumentException("Cart can't be empty.");
+            throw new IllegalArgumentException("Cart service can't be null.");
         }
         this.cartService = cartService;
     }
