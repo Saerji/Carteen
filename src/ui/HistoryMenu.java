@@ -27,7 +27,11 @@ public class HistoryMenu {
             System.out.println("========== Order #" + order.getOrderNumber() + "==========");
             System.out.println("Date: " + order.getOrderTime().format(formatter));
             for(OrderItem item : order.getItems()) {
-                System.out.println(item.getProductName() + " x " + item.getQuantity() + "     " + item.getSubtotal());
+                System.out.printf("%s x %d     ₱%.2f%n",
+                    item.getProductName(),
+                    item.getQuantity(),
+                    item.getSubtotal()
+                );
             }
             System.out.printf("Total: ₱%.2f%n", order.getTotal());
             System.out.println();
