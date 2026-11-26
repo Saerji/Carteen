@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 import model.Shop;
+import model.Order;
 
 import service.MenuService;
 import service.CartService;
@@ -31,6 +32,7 @@ public class MainMenu_GUI extends JFrame {
 
         // SERVICES
         MenuService menuService = new MenuService();
+
         CartService cartService = new CartService();
 
         CheckoutService checkoutService =
@@ -44,6 +46,7 @@ public class MainMenu_GUI extends JFrame {
 
         // CONTENT PANEL
         CardLayout cardLayout = new CardLayout();
+
         JPanel contentPanel = new JPanel(cardLayout);
 
         // SHOP SELECTION PAGE
@@ -72,17 +75,30 @@ public class MainMenu_GUI extends JFrame {
             }
         }
 
+        // HISTORY PAGE
+        HistoryPanel historyPanel =
+                new HistoryPanel(historyService);
+
+        contentPanel.add(
+                historyPanel,
+                "HISTORY");
+
         // CART PAGE
-        CartPanel cartPanel = new CartPanel(cartService);
+        CartPanel cartPanel =
+                new CartPanel(cartService);
 
         contentPanel.add(
                 cartPanel,
                 "CART");
 
-        // HISTORY PAGE
-        contentPanel.add(
-                new HistoryPanel(),
-                "HISTORY");
+        // CONNECT CHECKOUT BUTTON
+        cartPanel.setCheckoutAction(() ->
+                processCheckout(
+                        cartService,
+                        checkoutService,
+                        historyService,
+                        cartPanel,
+                        historyPanel));
 
         // NAVIGATION ACTIONS
         NavigationHandler navigationHandler =
@@ -92,12 +108,11 @@ public class MainMenu_GUI extends JFrame {
                         this);
 
         navigationHandler.initializeActions(
-                navigationBar.getMenuBtn(),
-                navigationBar.getHistoryBtn(),
-                navigationBar.getCartBtn(),
-                navigationBar.getSignOutBtn(),
-                cartPanel
-            );
+        navigationBar.getMenuBtn(),
+        navigationBar.getHistoryBtn(),
+        navigationBar.getCartBtn(),
+        navigationBar.getSignOutBtn(),
+        cartPanel);
 
         // MAIN PANEL
         JPanel mainPanel = new JPanel(new BorderLayout());
@@ -113,10 +128,72 @@ public class MainMenu_GUI extends JFrame {
         add(mainPanel);
     }
 
+    // CHECKOUT PROCESS
+    private void processCheckout(
+            CartService cartService,
+            CheckoutService checkoutService,
+            HistoryService historyService,
+            CartPanel cartPanel,
+            HistoryPanel historyPanel) {
+
+        // CHECK EMPTY CART
+        if (cartService.getCartItems().isEmpty()) {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Your cart is empty!",
+                    "Checkout Failed",
+                    JOptionPane.WARNING_MESSAGE);
+
+            return;
+        }
+
+        // CONFIRM CHECKOUT
+        int choice = JOptionPane.showConfirmDialog(
+                this,
+                "Are you sure you want to place your order?",
+                "Confirm Checkout",
+                JOptionPane.YES_NO_OPTION);
+
+        if (choice != JOptionPane.YES_OPTION) {
+            return;
+        }
+
+        // CREATE ORDER
+        Order order = checkoutService.createOrder();
+
+        if (order != null) {
+
+            // SAVE ORDER TO HISTORY
+            historyService.addOrder(order);
+
+            // COMPLETE CHECKOUT AND CLEAR CART
+            checkoutService.completeCheckout();
+
+            // REFRESH BOTH PAGES
+            cartPanel.refreshCart();
+            historyPanel.refreshHistory();
+
+            // SUCCESS MESSAGE
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Order #" + order.getOrderNumber()
+                    + " placed successfully!\n"
+                    + String.format(
+                            "Total: ₱%.2f",
+                            order.getTotal()),
+                    "Checkout Successful",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(() -> {
-            MainMenu_GUI mainMenuGUI = new MainMenu_GUI();
+
+            MainMenu_GUI mainMenuGUI =
+                    new MainMenu_GUI();
+
             mainMenuGUI.setVisible(true);
         });
     }
