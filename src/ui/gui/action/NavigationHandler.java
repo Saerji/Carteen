@@ -2,6 +2,9 @@
 package ui.gui.action;
 
 import javax.swing.*;
+
+import ui.gui.panel.CartPanel;
+
 import java.awt.*;
 
 public class NavigationHandler {
@@ -24,7 +27,8 @@ public class NavigationHandler {
         JButton menuBtn,
         JButton historyBtn,
         JButton cartBtn,
-        JButton signOutBtn
+        JButton signOutBtn,
+        CartPanel cartPanel
     ) {
 
         menuBtn.addActionListener(e ->
@@ -35,9 +39,11 @@ public class NavigationHandler {
             cardLayout.show(contentPanel, "HISTORY")
         );
 
-        cartBtn.addActionListener(e ->
-            cardLayout.show(contentPanel, "CART")
-        );
+        cartBtn.addActionListener(e ->{
+            cartPanel.refreshCart();
+        
+            cardLayout.show(contentPanel, "CART");
+        });
 
         signOutBtn.addActionListener(e -> {
 

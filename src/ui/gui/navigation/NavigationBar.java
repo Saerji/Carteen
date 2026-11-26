@@ -1,4 +1,3 @@
-
 package ui.gui.navigation;
 
 import javax.swing.*;
@@ -20,29 +19,28 @@ public class NavigationBar {
         navBar.setPreferredSize(new Dimension(0, 75));
         navBar.setBorder(BorderFactory.createEmptyBorder(10, 25, 10, 25));
 
-        createStudentSection();
+        createLogoSection();
         createNavigationButtons();
         createSignOutButton();
     }
 
-    private void createStudentSection() {
+    private void createLogoSection() {
 
-        JPanel studentPanel = new JPanel();
-        studentPanel.setLayout(new BoxLayout(studentPanel, BoxLayout.Y_AXIS));
-        studentPanel.setOpaque(false);
+        JPanel logoPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        logoPanel.setOpaque(false);
 
-        JLabel srCode = new JLabel("BSIT 25-00743");
-        srCode.setForeground(Color.WHITE);
-        srCode.setFont(new Font("Arial", Font.BOLD, 14));
+        ImageIcon originalIcon = new ImageIcon(
+            "resources/images/carteen-logo.png"
+        );
 
-        JLabel studentName = new JLabel("Juan Dela Cruz");
-        studentName.setForeground(Color.WHITE);
-        studentName.setFont(new Font("Arial", Font.PLAIN, 12));
+        Image scaledImage = originalIcon.getImage()
+            .getScaledInstance(180, 50, Image.SCALE_SMOOTH);
 
-        studentPanel.add(srCode);
-        studentPanel.add(studentName);
+        JLabel logoLabel = new JLabel(new ImageIcon(scaledImage));
 
-        navBar.add(studentPanel, BorderLayout.WEST);
+        logoPanel.add(logoLabel);
+
+        navBar.add(logoPanel, BorderLayout.WEST);
     }
 
     private void createNavigationButtons() {
@@ -54,12 +52,12 @@ public class NavigationBar {
         centerNav.setOpaque(false);
 
         menuBtn = createNavButton("MENU");
-        historyBtn = createNavButton("HISTORY");
         cartBtn = createNavButton("CART");
+        historyBtn = createNavButton("HISTORY");
 
         centerNav.add(menuBtn);
-        centerNav.add(historyBtn);
         centerNav.add(cartBtn);
+        centerNav.add(historyBtn);
 
         navBar.add(centerNav, BorderLayout.CENTER);
     }

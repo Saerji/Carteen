@@ -73,8 +73,10 @@ public class MainMenu_GUI extends JFrame {
         }
 
         // CART PAGE
+        CartPanel cartPanel = new CartPanel(cartService);
+
         contentPanel.add(
-                new CartPanel(),
+                cartPanel,
                 "CART");
 
         // HISTORY PAGE
@@ -93,7 +95,9 @@ public class MainMenu_GUI extends JFrame {
                 navigationBar.getMenuBtn(),
                 navigationBar.getHistoryBtn(),
                 navigationBar.getCartBtn(),
-                navigationBar.getSignOutBtn());
+                navigationBar.getSignOutBtn(),
+                cartPanel
+            );
 
         // MAIN PANEL
         JPanel mainPanel = new JPanel(new BorderLayout());
