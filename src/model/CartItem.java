@@ -1,10 +1,12 @@
+
 package model;
 
 public class CartItem {
+
     private final Product cartProduct;
     private int quantity;
 
-    public CartItem (Product cartProduct, int quantity){
+    public CartItem(Product cartProduct, int quantity) {
         this.cartProduct = cartProduct;
         this.quantity = quantity;
     }
@@ -12,15 +14,24 @@ public class CartItem {
     public Product getProduct() {
         return cartProduct;
     }
-    public int getQuantity(){
+
+    public int getQuantity() {
         return quantity;
     }
 
-    public int increaseQuantity(){
-        return quantity++;
+    public int increaseQuantity() {
+        return ++quantity;
     }
 
-    public double getSubtotal(){
+    public int decreaseQuantity() {
+        if (quantity > 0) {
+            quantity--;
+        }
+
+        return quantity;
+    }
+
+    public double getSubtotal() {
         return cartProduct.getPrice() * quantity;
     }
 }

@@ -11,18 +11,66 @@ public class CartService {
 
     private final List<CartItem> cartItems = new ArrayList<>();
 
+    private final List<String> addHistory = new ArrayList<>();
+
     public void addProduct(Product product) {
-        if(product == null) {
-            throw new IllegalArgumentException("Product can't be null.");
+
+        if (product == null) {
+            throw new IllegalArgumentException(
+                    "Product can't be null.");
         }
 
-        for(CartItem item : cartItems) {
-            if(item.getProduct() == product) {
+        for (CartItem item : cartItems) {
+
+            if (item.getProduct() == product) {
                 item.increaseQuantity();
                 return;
             }
         }
+
         cartItems.add(new CartItem(product, 1));
+    }
+
+    // INCREASE PRODUCT QUANTITY
+    public void increaseProductQuantity(Product product) {
+
+        if (product == null) {
+            throw new IllegalArgumentException(
+                    "Product can't be null.");
+        }
+
+        for (CartItem item : cartItems) {
+
+            if (item.getProduct() == product) {
+                item.increaseQuantity();
+                return;
+            }
+        }
+    }
+
+    // DECREASE PRODUCT QUANTITY
+    public void decreaseProductQuantity(Product product) {
+
+        if (product == null) {
+            throw new IllegalArgumentException(
+                    "Product can't be null.");
+        }
+
+        for (int i = 0; i < cartItems.size(); i++) {
+
+            CartItem item = cartItems.get(i);
+
+            if (item.getProduct() == product) {
+
+                if (item.getQuantity() <= 1) {
+                    cartItems.remove(i);
+                } else {
+                    item.decreaseQuantity();
+                }
+
+                return;
+            }
+        }
     }
 
     public List<CartItem> getCartItems() {
@@ -30,22 +78,28 @@ public class CartService {
     }
 
     public double getTotalPrice() {
+
         double total = 0;
 
-        for(CartItem item : cartItems) {
+        for (CartItem item : cartItems) {
             total += item.getSubtotal();
         }
+
         return total;
     }
 
     public void removeProduct(Product product) {
-        if(product == null) {
-            throw new IllegalArgumentException("Product can't be null.");
+
+        if (product == null) {
+            throw new IllegalArgumentException(
+                    "Product can't be null.");
         }
 
-        for(int i = 0; i < cartItems.size(); i++) {
+        for (int i = 0; i < cartItems.size(); i++) {
+
             CartItem item = cartItems.get(i);
-            if(item.getProduct() == product) {
+
+            if (item.getProduct() == product) {
                 cartItems.remove(i);
                 return;
             }
@@ -56,10 +110,11 @@ public class CartService {
         cartItems.clear();
     }
 
-    private final List<String> addHistory = new ArrayList<>();
-
+    // ADD HISTORY
     public void logAdd(Product product) {
-        this.addHistory.add(product.getName() + " - ₱" + product.getPrice());
+
+        this.addHistory.add(
+                product.getName() + " - ₱" + product.getPrice());
     }
 
     public List<String> getAddHistory() {
